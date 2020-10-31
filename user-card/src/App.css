@@ -272,6 +272,31 @@ header h1 {
 
 /* Responsive */
 
+@media only screen and (max-width: 600px) {
+  .user-card {
+    display: block;
+    text-align: center;
+  }
+
+  .user-card .card-info {
+    width: 100%;
+  }
+
+  .user-card .card-info hr {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-card .card-info a {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .user-card .profile-img {
+    width: 80%;
+  }
+}
+
 @media only screen and (min-width: 400px) and (max-width: 600px) {
   .followers-list .follower-card {
     width: 45%;
@@ -281,5 +306,13 @@ header h1 {
 @media only screen and (max-width: 400px) {
   .followers-list .follower-card {
     width: 100%;
+  }
+
+  .contributions {
+    display: none !important;
+  }
+
+  .search-form form input[type="text"] {
+    margin-bottom: 10px;
   }
 }
