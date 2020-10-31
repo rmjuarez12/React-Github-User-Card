@@ -1,38 +1,194 @@
-.App {
+/* Import fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+/* General styles */
+
+body {
+  background: #130f40;
+  font-family: "Lato", sans-serif;
+}
+
+a,
+button,
+img {
+  transition: 0.3s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+/* Header Styles */
+
+header {
+  margin: 20px auto 40px;
+}
+
+header h1 {
+  text-align: center;
+  color: #dff9fb;
+  font-size: 30px;
+}
+
+/* Card Styles */
+
+.user-card {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px;
+  background-color: #dff9fb;
+  padding: 20px;
+  transition: 0.3s all;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 10px 1px #000000;
+  box-shadow: 1px 1px 10px 1px #000000;
+  position: relative;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
+.user-card img {
+  width: 25%;
+  height: auto;
+  border: 2px solid #c7ecee;
+}
+
+.user-card:hover img {
+  border-radius: 50%;
+}
+
+.user-card .card-info {
+  width: 70%;
+  color: #30336b;
+}
+
+.user-card .card-info .heading h3 {
+  color: #30336b;
+  font-size: 25px;
+  margin-bottom: -5px;
+}
+
+.user-card .card-info .heading p {
+  font-style: italic;
+  font-size: 18px;
+  color: #95afc0;
+}
+
+.user-card .card-info hr {
+  height: 1px;
+  width: 50px;
+  border: none;
+  background: #95afc0;
+  margin: 15px 0;
+}
+
+.user-card .meta-info p {
+  margin-bottom: 3px;
+}
+
+.user-card .meta-info p span {
+  font-weight: bold;
+}
+
+.user-card .card-info a {
+  background: #f0932b;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.user-card .card-info a:hover {
+  background: #eb4d4b;
+}
+
+/* Followers Styles */
+
+.followers h2 {
+  text-align: center;
+  color: #dff9fb;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.followers-list {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.followers-list .follower-card {
+  width: 30%;
+  background-color: #dff9fb;
+  padding: 20px;
+  transition: 0.3s all;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 10px 1px #000000;
+  box-shadow: 1px 1px 10px 1px #000000;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.follower-card:hover {
+  transform: scale(1.05);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.followers-list .follower-card img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.followers-list .follower-card:hover img {
+  border-radius: 20px;
+}
+
+.followers-list .follower-card .heading p {
+  font-style: italic;
+  font-size: 18px;
+  color: #95afc0;
+}
+
+.followers-list .follower-card hr {
+  height: 1px;
+  width: 50px;
+  border: none;
+  background: #95afc0;
+  margin: 15px auto;
+}
+
+.followers-list .follower-card a {
+  background: #f0932b;
+  padding: 10px 30px;
   color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.followers-list .follower-card a:hover {
+  background: #eb4d4b;
 }
