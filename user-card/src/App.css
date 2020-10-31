@@ -84,6 +84,11 @@ header h1 {
   border: none;
 }
 
+.search-form form input[type="submit"]:disabled,
+.search-form form input[type="text"]:disabled {
+  opacity: 0.5;
+}
+
 /* Card Styles */
 
 .user-card {
