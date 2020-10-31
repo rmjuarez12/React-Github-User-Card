@@ -4,6 +4,24 @@
 
 /* General styles */
 
+#App {
+  padding: 20px;
+}
+
+#loading-overlay {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+}
+
 body {
   background: #130f40;
   font-family: "Lato", sans-serif;
@@ -34,6 +52,36 @@ header h1 {
   text-align: center;
   color: #dff9fb;
   font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.search-form form {
+  text-align: center;
+}
+
+.search-form form input[type="text"],
+.search-form form input[type="submit"] {
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.search-form form input[type="text"] {
+  border: #535c68 1px solid;
+  background: none;
+  color: white;
+  margin-right: 10px;
+}
+
+.search-form form input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-form form input[type="submit"] {
+  cursor: pointer;
+  background: #6ab04c;
+  color: white;
+  border: none;
 }
 
 /* Card Styles */
@@ -50,6 +98,7 @@ header h1 {
   -webkit-box-shadow: 1px 1px 10px 1px #000000;
   box-shadow: 1px 1px 10px 1px #000000;
   position: relative;
+  align-items: center;
 }
 
 .user-card:hover {
@@ -191,4 +240,18 @@ header h1 {
 
 .followers-list .follower-card a:hover {
   background: #eb4d4b;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .followers-list .follower-card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .followers-list .follower-card {
+    width: 100%;
+  }
 }

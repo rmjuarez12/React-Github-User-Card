@@ -15,10 +15,10 @@ export default function UserCard(props) {
         <hr />
 
         <div className="meta-info">
-          <p><span>Location:</span> {props.user.location}</p>
+          {props.user.location !== null && <p><span>Location:</span> {props.user.location}</p>}
           <p><span>Followers:</span> {props.user.followers}</p>
           <p><span>Following:</span> {props.user.following}</p>
-          <p><span>Bio:</span> {props.user.bio}</p>
+          {props.user.bio !== null && <p><span>Bio:</span> {props.user.bio}</p>}
         </div>
 
         <a href={props.user.html_url} target="_blank" rel="noreferrer">Visit Profile</a>
