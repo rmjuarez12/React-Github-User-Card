@@ -1,0 +1,318 @@
+/* Import fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+/* General styles */
+
+#App {
+  padding: 20px;
+}
+
+#loading-overlay {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+}
+
+body {
+  background: #130f40;
+  font-family: "Lato", sans-serif;
+}
+
+a,
+button,
+img {
+  transition: 0.3s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+/* Header Styles */
+
+header {
+  margin: 20px auto 40px;
+}
+
+header h1 {
+  text-align: center;
+  color: #dff9fb;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.search-form form {
+  text-align: center;
+}
+
+.search-form form input[type="text"],
+.search-form form input[type="submit"] {
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.search-form form input[type="text"] {
+  border: #535c68 1px solid;
+  background: none;
+  color: white;
+  margin-right: 10px;
+}
+
+.search-form form input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-form form input[type="submit"] {
+  cursor: pointer;
+  background: #6ab04c;
+  color: white;
+  border: none;
+}
+
+.search-form form input[type="submit"]:disabled,
+.search-form form input[type="text"]:disabled {
+  opacity: 0.5;
+}
+
+/* Card Styles */
+
+.user-card {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px;
+  background-color: #dff9fb;
+  padding: 20px;
+  transition: 0.3s all;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 10px 1px #000000;
+  box-shadow: 1px 1px 10px 1px #000000;
+  position: relative;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-card .contributions {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+.user-card .contributions h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #30336b;
+}
+
+.user-card .contributions img {
+  padding: 10px;
+  background: #30336b;
+}
+
+.user-card .contributions img {
+  width: 100%;
+  height: auto;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
+.user-card .profile-img {
+  width: 25%;
+  height: auto;
+  border: 2px solid #c7ecee;
+}
+
+.user-card:hover .profile-img {
+  border-radius: 50%;
+}
+
+.user-card .card-info {
+  width: 70%;
+  color: #30336b;
+}
+
+.user-card .card-info .heading h3 {
+  color: #30336b;
+  font-size: 25px;
+  margin-bottom: -5px;
+}
+
+.user-card .card-info .heading p {
+  font-style: italic;
+  font-size: 18px;
+  color: #95afc0;
+}
+
+.user-card .card-info hr {
+  height: 1px;
+  width: 50px;
+  border: none;
+  background: #95afc0;
+  margin: 15px 0;
+}
+
+.user-card .meta-info p {
+  margin-bottom: 3px;
+}
+
+.user-card .meta-info p span {
+  font-weight: bold;
+}
+
+.user-card .card-info a {
+  background: #f0932b;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.user-card .card-info a:hover {
+  background: #eb4d4b;
+}
+
+/* Followers Styles */
+
+.followers h2 {
+  text-align: center;
+  color: #dff9fb;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.followers-list {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.followers-list .follower-card {
+  width: 30%;
+  background-color: #dff9fb;
+  padding: 20px;
+  transition: 0.3s all;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 10px 1px #000000;
+  box-shadow: 1px 1px 10px 1px #000000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.follower-card:hover {
+  transform: scale(1.05);
+}
+
+.followers-list .follower-card img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.followers-list .follower-card:hover img {
+  border-radius: 20px;
+}
+
+.followers-list .follower-card .heading p {
+  font-style: italic;
+  font-size: 18px;
+  color: #95afc0;
+}
+
+.followers-list .follower-card hr {
+  height: 1px;
+  width: 50px;
+  border: none;
+  background: #95afc0;
+  margin: 15px auto;
+}
+
+.followers-list .follower-card a {
+  background: #f0932b;
+  padding: 10px 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.followers-list .follower-card a:hover {
+  background: #eb4d4b;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+  .user-card {
+    display: block;
+    text-align: center;
+  }
+
+  .user-card .card-info {
+    width: 100%;
+  }
+
+  .user-card .card-info hr {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-card .card-info a {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .user-card .profile-img {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .followers-list .follower-card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .followers-list .follower-card {
+    width: 100%;
+  }
+
+  .contributions {
+    display: none !important;
+  }
+
+  .search-form form input[type="text"] {
+    margin-bottom: 10px;
+  }
+}
